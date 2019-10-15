@@ -8,6 +8,6 @@ class Moradores extends Model
 {
     public function condominio()
     {
-        return $htis->belongsTo('App\Coniminios');
+        return $htis->belongsTo('App\Condominios');
     }
 }

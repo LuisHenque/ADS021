@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'morador'], function() {
+   Route::get('listar', 'MoradorController@listar');
+   Route::get('criar', 'MoradorController@criar');
+   Route::get('{id}/editar', 'MoradorController@editar');
+   Route::get('{id}/remover', 'MoradorController@remover');
+   Route::get('salvar', 'MoradorController@salvar');
+});
