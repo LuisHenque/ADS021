@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Morador extends Model
 {
-   public function condominio(){
+    protected $table='moradores';
+    public function condominio(){
         return $this->belongsTo('\App\Condominio');
    }
    public function unidade(){
