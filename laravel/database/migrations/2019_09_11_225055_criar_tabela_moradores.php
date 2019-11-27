@@ -22,6 +22,11 @@ class CriarTabelaMoradores extends Migration
             $table->String('placa');
             $table->String('veiculo');
             $table->String('situacao');
+//            $table->bigInteger('unidade_id')->unsigned();
+//            $table->foreign('unidade_id')->references('id')->on('unidades');
+////            $table->bigInteger('condominios_id')->unsigned()->nullable();
+//            $table->bigInteger('condominios_id')->unsigned();
+//            $table->foreign('condominios_id')->references('id')->on('condominios');
             $table->timestamps();
         });
     }

@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+//    return view('welcome');
+    return view('home2');
 });
 
 Auth::routes();
@@ -24,5 +25,5 @@ Route::group(['prefix' => 'morador'], function() {
    Route::get('criar', 'MoradorController@criar');
    Route::get('{id}/editar', 'MoradorController@editar');
    Route::get('{id}/remover', 'MoradorController@remover');
-   Route::get('salvar', 'MoradorController@salvar');
+   Route::post('salvar', 'MoradorController@salvar');
 });

@@ -14,12 +14,8 @@ class AdicionarConominiosTabelaMoradores extends Migration
     public function up()
     {
         Schema::table('moradores', function (Blueprint $table) {
-            $table->integer('condominios_id')
-                    ->unsigned()
-                    ->nullable();
-            $table->foreign('condominios_id')
-                    ->references('id')
-                    ->on('condominios');
+            $table->integer('condominios_id')->unsigned()->nullable();
+            $table->foreign('condominios_id')->references('id')->on('condominios');
         });
     }
 
